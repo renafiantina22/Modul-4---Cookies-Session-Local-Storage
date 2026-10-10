@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+header {
+    background: #243b64;
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    background: #40577e;
+    padding: 9px 14px;
+    border-radius: 5px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.price {
+    color: #243b64;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.stock {
+    color: #666;
+    font-size: 14px;
+}
+
+button, .button {
+    display: inline-block;
+    border: none;
+    background: #243b64;
+    color: white;
+    padding: 9px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+button:hover, .button:hover {
+    background: #172a49;
+}
+
+button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+form {
+    display: inline-block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 13px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #e8edf5;
+}
+
+.total {
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.alert {
+    padding: 12px;
+    background: #e2f5e9;
+    color: #21683b;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 15px 4%;
+        gap: 10px;
+    }
+
+    header h2 {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    
+    /* Perapian halaman keranjang */
+    .cart-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 280px;
+        gap: 24px;
+        align-items: start;
+    }
+
+    .cart-card {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 0 18px;
+    }
+
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        padding: 18px 0;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .cart-item:last-child {
+        border-bottom: none;
+    }
+
+    .cart-item h3 {
+        margin: 0 0 8px;
+    }
+
+    .cart-item p {
+        margin: 5px 0;
+    }
+
+    .cart-actions {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 12px;
+    }
+
+    .cart-actions form {
+        margin: 0;
+    }
+
+    .summary-card {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+    }
+
+    .summary-card h2 {
+        margin: 0 0 16px;
+        font-size: 20px;
+    }
+
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 0;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .summary-total {
+        font-size: 18px;
+        font-weight: bold;
+        color: #243b64;
+        border-bottom: none;
+    }
+
+    .summary-card form {
+        display: block;
+        margin-top: 12px;
+    }
+
+    .summary-card button,
+    .summary-card .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .empty-state {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 35px 20px;
+        text-align: center;
+    }
+
+    @media (max-width: 700px) {
+        .cart-layout {
+            grid-template-columns: 1fr;
+        }
+
+        .cart-item {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+
+}
